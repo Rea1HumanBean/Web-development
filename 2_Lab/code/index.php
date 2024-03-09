@@ -32,3 +32,6 @@ $days = $months * 16;
 
 $days_per_language = $days / $num_languages;
 echo "\n"."The average number of days of the study: ".($days_per_language);
+
+//Task - 4
+echo "\n".(8**2);
