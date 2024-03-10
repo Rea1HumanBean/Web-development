@@ -4,7 +4,7 @@ echo ("\nTask - 5 ____________\n");
 $my_num = PHP_INT_MAX;
 $answer = $my_num;
 var_dump($answer); // Первоначально тип у переменной int
-$answer += 2;      // При переполнении она превращается в float
+$answer += 2;      // При переполнении превращается в float
 var_dump($answer);
 $answer *= 2;
 $answer -= 2;
