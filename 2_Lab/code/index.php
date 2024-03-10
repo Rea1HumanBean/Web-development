@@ -34,4 +34,16 @@ $days_per_language = $days / $num_languages;
 echo "\n"."The average number of days of the study: ".($days_per_language);
 
 //Task - 4
-echo "\n".(8**2);
+echo "\n".(8**2)."\n";
+
+//Task - 5
+$my_num = PHP_INT_MAX;
+$answer = $my_num;
+var_dump($answer); // Первоначально тип у переменной int
+$answer += 2;      // При переполнении она превращается в float
+$answer *= 2;
+$answer -= 2;
+$answer /= 2;
+$answer -= $my_num; //Значение должно быть равно 1, однако из-за точности представления чисел с плавающей точкой значение будет равно нулю)0)
+echo $answer."\n";
+var_dump($answer);
