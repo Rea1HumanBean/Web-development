@@ -1,18 +1,17 @@
 <?php
 echo ("\nTask - 6 ____________\n");
+//Работа с %
+$a = 10;
+$b = 3;
+echo ("Remains of 3 from 10: ".($a % $b))."\n";
 
-function isDivide(int $a,int $b){
+function isDivide(int $a,int $b): void {
 	$result = $a % $b;
 	if($result == 0)
 		echo ("Делится"."\n");
 	else
 		echo ('Делится с остатком: '. $result."\n");
 }
-
-//Работа с %
-$a = 10;
-$b = 3;
-echo ("Remains of 3 from 10: ".($a % $b))."\n";
 
 isDivide(11,4);
 
@@ -66,7 +65,7 @@ echo "\n";
 $a = 10;
 $b = 101;
 
-echo "Модуль разности $a и  $b: ". abs($a - $b);
+echo "Модуль разности $a и  $b: ". abs($a - $b)."\n";
 
 //Общее
 $a = 16;
