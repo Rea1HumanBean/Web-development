@@ -6,7 +6,7 @@
 	<title>Лабораторная №3</title>
 </head>
 <body>
-<p><b style="color: blue;">Задание 1. Регулярные выражения</b></p>
+<p><b style="color: blue;">Задание 1.1. Регулярные выражения</b></p>
 
 	<form method="POST">
 		<label>
@@ -24,7 +24,7 @@
 		<?php include 'Task_1.2.php'; ?>
 	</form>
 
-<p><b style="color: blue;">Задание 2. Форма. Сессии и Куки</b></p>
+<p><b style="color: blue;">Задание 2.1. Форма. Сессии и Куки</b></p>
 
 	<form>
 		<label>
