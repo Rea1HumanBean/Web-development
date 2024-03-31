@@ -1,26 +1,44 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Задача 2.2</title>
-	<link rel="stylesheet" href="../style/Task_2.2.css">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Регулярка</title>
 </head>
 <body>
-	<form method="POST" action="InfoPerson.php">
-		<span style="color: blue">Введите данные</span><br>
+<?php
+echo "Task 1.a <br>";
+// Пример строки
+$str = 'ahb acb aeb aeeb adcb axeb';
 
-		<label for="surname">Фамилия:</label>
-		<input type="text" id="surname" name="surname" required><br>
+// Регулярное выражение
+$pattern = '/a..b/';
 
-		<label for="name">Имя:</label>
-		<input type="text" id="name" name="name" required><br>
+// Находим все совпадения
+preg_match_all($pattern, $str, $matches);
 
-		<label for="age">Возраст:</label>
-		<input type="number" id="age" name="age" required><br>
+// Выводим найденные строки
+print_r($matches[0]);
 
-		<button type="submit" formaction="secondPage.php">Отправить</button>
-</form>
+echo "<br>Task 1.b<br>";
+// Исходная строка
+$str = 'a1b2c3';
+
+// Регулярное выражение для поиска чисел
+$pattern = '/(\d+)/';
+
+// Функция обратного вызова для замены чисел на их кубы
+function replaceCallback($matches) {
+	return $matches[1] * $matches[1] * $matches[1];
+}
+
+// Заменяем числа на их кубы
+$newStr = preg_replace_callback($pattern, 'replaceCallback', $str);
+
+// Выводим преобразованную строку
+echo $newStr;
+?>
 </body>
 </html>
