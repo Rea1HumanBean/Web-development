@@ -1,0 +1,19 @@
+div {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	width: 400px;
+	height: 200px;
+	border: 1px solid black;
+	padding: 20px;
+	position: relative;
+}
+
+div img {
+	width: 100px;
+	height:80px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding-right: 5px;
+	padding-top: 5px;
+}
