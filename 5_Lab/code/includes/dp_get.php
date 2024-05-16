@@ -9,26 +9,30 @@ function redirectToHome(): void
 
 $pdo = connectToDatabase();
 
-$sql = "SELECT * FROM web.ad";
-$stmt = $pdo->prepare($sql);
-$stmt->execute();
+try {
+	$sql = "SELECT ID, email AS `E-mail`, title AS `Title`, description AS `Description`, category AS `Category` FROM web.ad";
 
-$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$stmt = $pdo->prepare($sql);
+	$stmt->execute();
 
-if (is_array($results)) {
-	foreach ($results as $row) {
-		echo '<tr>';
-		$numColumns = count($row);
-		$index = 0;
+	$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-		foreach ($row as $cell) {
-			$index++;
-			if ($index < $numColumns) {
-				echo "<td>" . htmlspecialchars($cell) . "</td>";
-			}
+	if (is_array($results)) {
+		foreach ($results as $row) {
+			echo '<tr>';
+			echo "<td>" . htmlspecialchars($row['ID']) . "</td>";
+			echo "<td>" . htmlspecialchars($row['E-mail']) . "</td>";
+			echo "<td>" . htmlspecialchars($row['Category']) . "</td>";
+			echo "<td>" . htmlspecialchars($row['Description']) . "</td>";
+			echo "<td>" . htmlspecialchars($row['Title']) . "</td>";
+			echo '</tr>';
 		}
-		echo '</tr>';
+	} else {
+		
+		logError("No data found");
+		echo "<tr><td colspan='5'>No data found</td></tr>";
 	}
+} catch (PDOException $e) {
+	die("Query failed: " . $e->getMessage());
 }
-
 
