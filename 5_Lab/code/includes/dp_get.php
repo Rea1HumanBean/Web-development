@@ -28,7 +28,7 @@ try {
 			echo '</tr>';
 		}
 	} else {
-		
+
 		logError("No data found");
 		echo "<tr><td colspan='5'>No data found</td></tr>";
 	}
