@@ -1,12 +1,29 @@
 <?php
 
 include 'log.php';
-include 'posFirstFreeCell.php';
 require __DIR__.'/../../vendor/autoload.php';
+function findFirstEmptyRow($values) {
+	$rowCount = count($values);
+
+	for ($i = 0; $i < $rowCount; $i++) {
+		$row = $values[$i];
+		$isEmptyRow = true;
+
+		foreach ($row as $cell) {
+			if (!empty($cell)) {
+				$isEmptyRow = false;
+				break;
+			}
+		}
+
+		if ($isEmptyRow) {
+			return $i + 1;
+		}
+	}
+	return $rowCount + 1;
+}
 
 use Google\Client as Google_Client;
-use Google\Spreadsheet\ServiceRequestFactory;
-use Google\Spreadsheet\DefaultServiceRequest;
 
 try{
 	$client = new Google_Client;
