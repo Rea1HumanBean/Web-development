@@ -39,8 +39,8 @@
 				<th>ID</th>
 				<th>E-mail</th>
 				<th>Category</th>
-				<th>Title</th>
 				<th>Description</th>
+				<th>Title</th>
 			</tr>
 			</thead>
 			<tbody>
