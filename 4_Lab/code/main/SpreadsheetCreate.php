@@ -16,17 +16,17 @@ function redirectToHome(): void {
 
 try{
 	$client = new Google_Client;
-	$client->setApplicationName("LAB_4");
+	$client->setApplicationName("LAB_4"); //Любое название
 	$client->setScopes([Google_Service_Sheets::SPREADSHEETS]);
 	$client->addScope('https://www.googleapis.com/auth/spreadsheets');
-	$client->setAuthConfig(__DIR__.'/credentials.json');
+	$client->setAuthConfig(__DIR__.'/credentials.json'); //там где учётка хранится и с каким именем
 	$client->setAccessType("offline");
 	$client->useApplicationDefaultCredentials();
 
 	$service = new Google_Service_Sheets($client);
-	$spreadsheetId = '1J-pwaAyc7dVmDIrF26H_7s-aZLLoOAvrXuykSU8Qwu4';
+	$spreadsheetId = '1J-pwaAyc7dVmDIrF26H_7s-aZLLoOAvrXuykSU8Qwu4'; // ID-шку сюда вставляем
 
-	$response = $service->spreadsheets_values->get($spreadsheetId, 'Лист1!A1:D');
+	$response = $service->spreadsheets_values->get($spreadsheetId, 'Лист1!A1:D'); // название листа у вас такое же как и таблицу
 	$values = $response->getValues();
 
 	$row = findFirstEmptyRow($values);
