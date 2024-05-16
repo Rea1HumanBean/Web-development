@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,7 @@
 	<title>Работа с Google Sheets</title>
 </head>
 <body>
-	<form method="POST" action="SpreadsheetCreate.php">
+	<form method="POST" action="SpreadsheetCreate.php"> <!-- Этот такой файл, в которм будет реализация post запроса c апишкой -->
 		<label for="email">E-mail:</label>
 		<input id="email" type="email" name="email" required>
 
@@ -46,7 +47,7 @@
 			<tbody>
 			<tr>
 				<?php
-				require __DIR__.'/loadSheets.php';
+					require __DIR__.'/loadSheets.php';
 				?>
 			</tr>
 			</tbody>
