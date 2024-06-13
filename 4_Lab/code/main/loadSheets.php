@@ -35,9 +35,9 @@ try{
 	$client->useApplicationDefaultCredentials();
 
 	$service = new Google_Service_Sheets($client);
-	$spreadsheetId = '1J-pwaAyc7dVmDIrF26H_7s-aZLLoOAvrXuykSU8Qwu4';
+	$spreadsheetId = '';
 
-	$response = $service->spreadsheets_values->get($spreadsheetId, 'Лист1!A2:D');
+	$response = $service->spreadsheets_values->get($spreadsheetId, 'Лист1!A1:D');
 	$values = $response->getValues();
 
 	if(is_array($values)) {
