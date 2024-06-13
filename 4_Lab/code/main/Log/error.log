@@ -1,0 +1,35 @@
+2024-06-07 21:19:37 No data found
+2024-06-07 21:19:37 No data found
+2024-06-07 21:20:00 {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "errors": [
+      {
+        "message": "The caller does not have permission",
+        "domain": "global",
+        "reason": "forbidden"
+      }
+    ],
+    "status": "PERMISSION_DENIED"
+  }
+}
+ 118 C:\WEB\Web-development\4_Lab\vendor\google\apiclient\src\Google\Http\REST.php 
+2024-06-07 21:20:01 No data found
+2024-06-07 21:20:56 No data found
+2024-06-07 21:20:58 No data found
+2024-06-07 21:22:17 No data found
+2024-06-07 21:22:21 No data found
+2024-06-07 21:22:30 No data found
+2024-06-07 21:22:30 No data found
+2024-06-07 21:24:35 No data found
+2024-06-07 21:31:04 No data found
+2024-06-07 21:32:06 No data found
+2024-06-07 21:32:15 No data found
+2024-06-07 21:32:59 No data found
+2024-06-07 21:33:01 No data found
+2024-06-07 21:34:50 No data found
+2024-06-07 21:35:07 No found
+2024-06-07 21:35:15 No found
+2024-06-07 21:35:16 No found
+2024-06-07 21:36:32 No data found
